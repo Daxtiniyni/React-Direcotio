@@ -1,0 +1,75 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin: 0%;
+    background-color: antiquewhite;
+
+}
+
+.h1{
+    font-size: 70px;
+    padding-left: 15px;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.h2{
+    font-size: 35px;
+    padding-left: 15px;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+div .contenedor{
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 15px;
+}
+
+.lista{
+    display: flex;
+    padding-left: 35px;
+    background-color: antiquewhite;
+}
+
+.divpadre{
+    padding-top: 20px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+div .divhijo{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 35px;
+    
+}
+
+div div p{
+    width: 30wv;   
+}
+
+div div button{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    /* font-size: 18px; */
+    overflow: hidden;
+    transition: all 500ms ease;
+}
+
+.btn :hover{
+    background-color: aqua;
+    box-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 20px aqua, ;
+    color: black;
+}
