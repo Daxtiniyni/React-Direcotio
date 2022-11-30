@@ -25,6 +25,7 @@ function ContactoProvider(props){
 
   let [contactosList,setContactosList]=React.useState(contactos);
   let [valorBusqueda,setValorBusqueda]=React.useState("");
+  let [modal,setModal]=React.useState(false);
 
   let cantidadAmigos=contactosList.length;
   let contactosFiltro;
@@ -37,6 +38,12 @@ function ContactoProvider(props){
     setContactosList(contactosTemporal);
   }
 
+  function agregarAmigo(amigo){
+    let contactosTemporal=[...contactos];
+    contactosTemporal.push(amigo)
+    localStorage.setItem("contactos",JSON.stringify(contactosTemporal));
+    setContactosList(contactosTemporal);
+  }
 
   if(valorBusqueda.length>0){
     let texoBusqueda=valorBusqueda.toLowerCase();
@@ -59,7 +66,10 @@ function ContactoProvider(props){
             valorBusqueda,
             setValorBusqueda,
             contactosFiltro,
-            borrarAmigo
+            borrarAmigo,
+            modal,
+            setModal,
+            agregarAmigo
         }}>
             {props.children}
         </ContactoContext.Provider>

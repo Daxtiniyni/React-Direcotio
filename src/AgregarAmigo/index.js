@@ -1,12 +1,15 @@
 import React from "react";
-
+import { ContactoContext } from "../Context/ContactoProvider";
 
 function AgregarAmigo(){
-    const miFuncion=()=>{
-        console.log("Si jala men");
+    
+    let {setModal} = React.useContext(ContactoContext);
+
+    const abreModal=()=>{
+        setModal(true);
     }
     return(
-        <button onClick={miFuncion}>+Amigo</button>
+        <button onClick={abreModal}>+Amigo</button>
     );
 }
 

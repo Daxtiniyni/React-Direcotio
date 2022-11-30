@@ -21,4 +21,4 @@ function Contacto(props){
     );
 }
 
-export default Contacto
+export default Contacto;
